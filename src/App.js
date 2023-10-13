@@ -1,8 +1,15 @@
 import React from 'react'
-
+import Nav from './navigation/Nav'
+import Products from './Product/Products'
+import Recommended from './Recommended/Recommended'
+import "./index.css";
 const App = () => {
   return (
-    <div>App</div>
+    <>
+    <Nav />
+    <Products />
+    <Recommended />
+    </>
   )
 }
 
