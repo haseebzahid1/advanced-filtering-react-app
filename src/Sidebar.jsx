@@ -10,7 +10,7 @@ const Sidebar = ({handleChange}) => {
       <h1>🛒</h1>
     </div>
     <Category handleChange={() => console.log('Category')} />
-    <Price  />
+    <Price handleChange={() => console.log('Price')} />
     <Colors  handleChange={() => console.log('Color')} />
   </section>
   )

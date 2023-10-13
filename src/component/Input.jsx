@@ -1,4 +1,4 @@
-const Input = ({ handleChange, value, title, name, color }) => {
+const Input = ({ handleChange, value, title, name, color, type}) => {
     return (
       <label className="sidebar-label-container">
         <input onChange={handleChange} type="radio" value={value} name={name} />
