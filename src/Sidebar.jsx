@@ -9,9 +9,9 @@ const Sidebar = ({handleChange}) => {
     <div className="logo-container">
       <h1>🛒</h1>
     </div>
-    <Category handleChange={() => console.log('Category')} />
-    <Price handleChange={() => console.log('Price')} />
-    <Colors  handleChange={() => console.log('Color')} />
+    <Category handleChange={handleChange} />
+    <Price handleChange={handleChange} />
+    <Colors  handleChange={handleChange} />
   </section>
   )
 }

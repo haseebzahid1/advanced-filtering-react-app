@@ -11,11 +11,12 @@ const App = () => {
 
   // ----------- Input Filter -----------
   const [query, setQuery] = useState("");
-
+ 
   const handleInputChange = (event) => {
     setQuery(event.target.value);
+  
   };
-
+ 
   const filteredItems = ProductData.filter(
     (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
   );
@@ -72,9 +73,9 @@ const App = () => {
 
   return (
     <>
-      <Sidebar />
-      <Nav />
-      <Recommended />
+      <Sidebar handleChange={handleChange} />
+      <Nav query={query} handleInputChange={handleInputChange} />
+      <Recommended handleClick = {handleClick} />
       <Products result={result} />
     </>
   );
