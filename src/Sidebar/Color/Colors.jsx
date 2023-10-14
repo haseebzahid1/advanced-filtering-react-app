@@ -1,8 +1,14 @@
-import './Colors.css'
+import "./Colors.css";
 import Input from "../../component/Input";
 
-
 const Colors = ({ handleChange }) => {
+  const inputColors = [
+    { value: "black", title: "Black", name: "test1", color: "black" },
+    { value: "blue", title: "Blue", name: "test1", color: "blue" },
+    { value: "red", title: "Red", name: "test1", color: "red" },
+    { value: "green", title: "Green", name: "test1", color: "green" },
+  ];
+
   return (
     <>
       <div>
@@ -13,37 +19,16 @@ const Colors = ({ handleChange }) => {
           All
         </label>
 
-        <Input
-          handleChange={handleChange}
-          value="black"
-          title="Black"
-          name="test1"
-          color="black"
-        />
-
-        <Input
-          handleChange={handleChange}
-          value="blue"
-          title="Blue"
-          name="test1"
-          color="blue"
-        />
-
-        <Input
-          handleChange={handleChange}
-          value="red"
-          title="Red"
-          name="test1"
-          color="red"
-        />
-
-        <Input
-          handleChange={handleChange}
-          value="green"
-          title="Green"
-          name="test1"
-          color="green"
-        />
+        {inputColors.map((input, index) => (
+          <Input
+            key={index} // It's important to provide a unique key for React components rendered in a loop
+            handleChange={handleChange}
+            value={input.value}
+            title={input.title}
+            name={input.name}
+            color={input.color}
+          />
+        ))}
 
         <label className="sidebar-label-container">
           <input
